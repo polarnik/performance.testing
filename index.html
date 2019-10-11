@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Тестирование производительности</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/material/styles/styles.css">
+	<link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+            --slide-width: 1280px;
+            --color-key: #ffcc00;
+            --color-yellow: #ffcc00;
+        }
+    </style>	
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Тестирование производительности</h1>
+		<p><a href="https://polarnik.github.io">Вячеслав Смирнов</a></p>
+	</header>
+
+	<section class="clear slide" id="title"><div>
+		<h2>Тестирование<br/>производительности</h2>
+		<p>Вячеслав Смирнов</p>
+		<p>owasp@yandex.ru</p>
+		<style>
+			#title h2 {
+				position: relative;
+				top: calc(var(--slide-height) / 10);
+				left: calc(var(--slide-width) / 4);
+				font-size: calc(var(--slide-height) / 12);
+			}
+			#title p {
+				position: relative;
+				top: 150px;
+				left: calc(var(--slide-width) / 4);
+				font-size: calc(var(--slide-height) / 20);
+				line-height: calc(var(--slide-height) / 15);
+			}
+			#title div div {
+				width: 250px;
+				height: 250px;
+				position: relative;
+				top: -120px;
+				left: 575px;
+				background: #A6CE38;
+				background: red;
+				border-radius: 50%;
+				white-space: nowrap;
+				text-align: center;
+			}
+			#title div div span {
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			#title div div img {
+				z-index: auto;
+				vertical-align: middle;
+				position: static;
+			}
+		</style>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<h2>Тестирование производительности</h2>
+		<ul>
+			<li>Как проводить тестирование производительности</li>
+			<li>Генерация тестовых данных</li>
+			<li>Ограничения</li>
+			<li>Инструменты</li>
+		</ul>
+	</div></section>
+
+
+	<section class="clear slide"><div>
+		<h2>Тестирование производительности сегодня</h2>
+		<ul class="next">
+			Аналитики
+			<li><mark class="red">Удобство использования</mark></li>
+			<li><mark class="red">Понятность бизнес-процесса, запоминаемость</mark></li>
+		</ul>
+		<ul class="next">
+			Проектировщики интерфейсов, Frontend/Android/iOS-разработчики
+			<li><mark class="yellow">Клиенсткая оптимизация, быстрая отрисовка</mark></li>
+			<li><mark class="yellow">Энергоэффективность</mark></li>
+		</ul>		
+		<ul class="next">
+			Администраторы, backend-разработчики
+			<li><mark class="green">Быстрые ответы сервера</mark></li>
+			<li><mark class="green">Эффективное использование оборудования</mark></li>
+		</ul>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Инженер по производительности —<br/>на все руки мастер</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Что такое<br/>тестирование производительности?</h2>
+	</div></section>
+
+	<section class="clear slide"><div>		
+		<figure>
+			<img class="h cover" src="images/2/final-1.png">			
+		</figure>
+	</div></section>	
+
+	<section class="clear slide"><div>		
+		<figure>
+			<img class="h cover" src="images/2/final-2.png">			
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Для успеха важно <ul>
+			<li>и как поставлена задача</li>
+			<li>и как выбраны технологии</li>
+			<li>и как фиксируются результаты</li>
+			<li>и как организована работа</li>
+			<li>и кем она выполняется</li>
+			<ul></h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Задача:<br/>провести тестирование производительности</h2>
+	</div></section>
+
+	<section class="clear slide"><div>		
+		<figure>
+			<img class="w cover" src="images/1/system.png" >			
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/1/internet.png">
+			<figcaption class="copyright right">
+				© <a href="https://infogram.com/test-1hmr6gy3l5po6nl">owasp (infogram.com)</a>
+			</figcaption>			
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Тестирование производительности<ul>
+			<li>подсистем серверов</li>
+			<li>серверов и приложений на простых запросах</li>
+			<li>приложений при выполнении сценариев</li>
+			<li>в соотвествие с требованиями</li>
+			<ul></h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Задача:<br/>
+			провести тестирование производительности<br/>
+			подсистем серверов
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>диск</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/system.io.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>диск</mark></h2>
+		<h3><mark>fio</mark> — Flexible I/O Tester (github.com/axboe/fio)</h3>
+		Рекомендуется Amazone EC2, Google Cloud, Alibaba Cloud:
+		<ul>
+			<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/benchmark_procedures.html">Benchmark EBS Volumes</a></li>
+			<li><a href="https://cloud.google.com/filestore/docs/performance">Cloud Filestore » Documentation » Performance </a></li>
+			<li><a href="https://www.alibabacloud.com/help/doc-detail/25382.html">Elastic Compute Service » Block Storage » Block storage performance 
+
+</a></li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>диск</mark></h2>
+		<h3><mark>fio</mark> — Flexible I/O Tester (github.com/axboe/fio)</h3>
+		<figure>
+			<img class="w center" src="images/1/fio.google.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>процессор</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/system.cpu.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>процессор</mark></h2>
+		<h3><mark>Phoronix</mark> — <a href="https://phoronix-test-suite.com">phoronix-test-suite.com</a></h3>
+		<pre>
+			<code>phoronix-test-suite benchmark smallpt</code>
+			<code>    Test Results:</code>
+<code>        57.683207988739</code>
+<code>        57.237819910049</code>
+<code>        57.684161901474</code>
+<code>    Average: 57.54 Seconds</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>сеть</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/system.net.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>сеть</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/system.net.2.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><b>Смоделировать</b> нагрузку на: <mark>сеть</mark></h2>
+		<h3><mark>iperf3</mark> — <a href="https://software.es.net/iperf/">software.es.net/iperf/</a></h3>
+		<pre>
+			<code>iperf3 -s</code>
+			<code>iperf3 -c 192.168.1.66</code>
+<code>[ ID] Interval           Transfer     Bandwidth       Retr</code>
+<code>[  4]   0.00-10.00  sec  42.9 GBytes  36.8 Gbits/sec    0             sender</code>
+<code>[  4]   0.00-10.00  sec  42.9 GBytes  36.8 Gbits/sec                  receiver</code>
+		</pre>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<h2 class="next"><mark class="red">Узконаправленная синтетическая нагрузка</mark></h2>
+		<ul class="next">
+			<li><mark class="red">На подсистемы сервера</mark></li>
+		</ul>
+		<ul>
+			<li class="next"><mark class="yellow">Для диска — <b>fio</b></mark></li>
+			<li class="next"><mark class="yellow">Для процессора — <b>phoronix-test-suite</b></mark></li>
+			<li class="next"><mark class="yellow">Для сети — <b>iperf3</b></mark></li>
+		</ul>
+		<ul class="next">
+			<li><mark class="green">Единая шкала оценки</mark></li>
+			<li><mark class="green">Простота сравнения результатов</mark></li>
+			<li><mark class="green">Знание пределов оборудования</mark></li>
+		</ul>		
+		<figure>
+			<img class="w cover" src="images/1/terminator.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://naked-science.ru/article/hi-tech/v-permi-sozdana-deystvuyushchaya">naked-science.ru</a>
+			</figcaption>			
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">
+			<ol>
+			<li>
+				<b>Смоделировать</b> нагрузку на подсистемы:
+				<ul>
+					<li>диск — <a href="https://github.com/axboe/fio">fio</a></li>
+					<li>процессор — <a href="https://www.phoronix-test-suite.com/">phoronix-test-suite</a></li>
+					<li>сеть — <a href="https://software.es.net/iperf/">iperf3</a></li>
+				</ul>
+			</li>
+			<li  class="next">
+				<b>Отладить</b> мониторинг:
+				<ul>
+					<li>TIG — <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>, <a href="https://www.influxdata.com/products/influxdb-overview/">InfluxDB</a>, <a href="https://grafana.com/">Grafana</a></li>
+					<li>Prometheus — <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>, <a href="https://prometheus.io/">Prometheus</a>, <a href="https://grafana.com/">Grafana</a></li>
+					<li>Zabbix — <a href="https://www.zabbix.com/ru/">Zabbix</a>, <a href="https://grafana.com/">Grafana</a></li>
+				</ul>				
+			</li>
+			<li class="next">
+				<b>Сохранить</b>:
+				<ul>
+					<li>в текстовый файл, базу, отчёт</li>
+				</ul>					
+			</li>
+			<li class="next">
+				<b>Сравнить</b>:
+				<ul>
+					<li>между стендами, с прошлыми результатами</li>
+					<li>с <a href="https://openbenchmarking.org">openbenchmarking.org</a></li>
+				</ul>					
+			</li>
+			<li class="next">
+				<b>Обсудить</b>:
+				<ul>
+					<li>с коллегами системными администраторами</li>
+				</ul>					
+			</li>							
+		</ol>
+		</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Задача:<br/>
+			провести тестирование производительности<br/>
+			серверов и приложений на простых запросах
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подать нагрузку на: <mark>балансировщик</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/simple.balanser.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подать нагрузку на: <mark>сервер баз данных</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/simple.db.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подать нагрузку на: <mark>сервер приложений</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/simple.app.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подать нагрузку на: <mark>сервер приложений</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/simple.app.2.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подать нагрузку на: <mark>сервер приложений</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/simple.app.3.png">
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<h2 class="next"><mark class="red">Статичные несвязанные запросы к системе</mark></h2>
+		<ul class="next">
+			<li ><mark class="red">С заданным количеством повторений</mark></li>
+			<li ><mark class="red">Одним или несколькими фиксированными запросами</mark></li>
+		</ul>
+		<ul>
+			<li class="next"><mark class="yellow">BASH-скриптом с <b>curl</b>/<b>wget</b> в цикле</mark></li>
+			<li class="next"><mark class="yellow">На уровне TCP-протокола — <b>tcpreplay</b></mark></li>
+			<li class="next"><mark class="yellow">На MySQL — <b>sysbench</b></mark></li>
+			<li class="next"><mark class="yellow">На PostgreSQL — <b>pgbench</b></mark></li>
+			<li class="next"><mark class="yellow">На балансировщик — <b>httperf</b> (с паузами по списку URL)</mark></li>
+			<li class="next"><mark class="yellow">На сервер — <b>ab</b> (без пауз)</mark></li>
+		</ul>
+		<ul class="next">
+			<li><mark class="green">Точечная простая нагрузка</mark></li>
+			<li><mark class="green">Единая шкала для программного обеспечения</mark></li>
+		</ul>		
+		<figure>
+			<img class="w cover" src="images/1/boy-ukreplennaya.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://www.goodfon.ru/wallpaper/art-noch-gory-boy-ukreplennaya.html">www.goodfon.ru</a>
+			</figcaption>			
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">
+			<ol>
+			<li>
+				Подать <b>простую эталонную</b> нагрузку на сервисы:
+				<ul>
+					<li>балансировщик — httperf, ab</li>
+					<li>сервер баз данных — sysbench, pgbench</li>
+					<li>сервер приложений — curl, wget, tcpreplay, ab</li>
+				</ul>
+			</li>
+			<li  class="next">
+				<b>Отладить</b> мониторинг:
+				<ul>
+					<li>TIG — <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>, <a href="https://www.influxdata.com/products/influxdb-overview/">InfluxDB</a>, <a href="https://grafana.com/">Grafana</a></li>
+					<li>Prometheus — <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>, <a href="https://prometheus.io/">Prometheus</a>, <a href="https://grafana.com/">Grafana</a></li>
+					<li>Zabbix — <a href="https://www.zabbix.com/ru/">Zabbix</a>, <a href="https://grafana.com/">Grafana</a></li>
+				</ul>				
+			</li>
+			<li class="next">
+				<b>Сохранить</b>:
+				<ul>
+					<li>в текстовый файл, базу, отчёт</li>
+				</ul>					
+			</li>
+			<li class="next">
+				<b>Изменить</b> конфигурацию:
+				<ul>
+					<li>по документации, по рекомендациям</li>
+				</ul>					
+			</li>
+			<li class="next">
+				<b>Обсудить</b>:
+				<ul>
+					<li>с коллегами системными администраторами</li>
+				</ul>					
+			</li>							
+		</ol>
+		</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Задача:<br/>
+			провести тестирование производительности<br/>
+			приложений при выполнении сценариев
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Часто и быстро <mark>выполнить сценарий</mark></h2>
+		<figure>
+			<img class="w center" src="images/1/complex.0.png">
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<h2 class="next"><mark class="red">Динамичные связанные запросы к системе</mark></h2>
+		<ul class="next">
+			<li><mark class="red">С высокой интенсивностью, но некотроллируемой</mark></li>
+			<li><mark class="red">Запросами, связанными в сценарий</mark></li>
+		</ul>
+		<ul class="next">
+			<li><mark class="yellow">Самописные утилиты «Бешеный пользователь»</mark></li>
+			<li><mark class="yellow">Функциональный тест без пауз в несколько потоков</mark></li>
+			
+		</ul>
+		<ul class="next">
+			<li><mark class="green">Не требует знания нагрузочных инструментов</mark></li>
+			<li><mark class="green">Быстрое выявление дефектов</mark></li>
+			<li><mark class="green">Простота запуска, но лишь одна метрика (длительность)</mark></li>
+			<li><mark class="green">Сценарии, а не статичные запросы</mark></li>
+		</ul>		
+		<figure>
+			<img class="w cover" src="images/1/perf.1.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://reputazzi.com/chto-takoe-vytesnenie-negativa-iz-topa-poiskovyh-sistem-i-zachem-eto-nuzhno/">reputazzi.com</a>
+			</figcaption>			
+		</figure>
+	</div></section>	
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">
+			<ol>
+			<li>
+				Часто и быстро выполнить <b>сценарий</b>:
+				<ul>
+					<li>написать утилиту — "бешеный пользователь"</li>
+					<li>скомпоновать автотесты — повторить N раз</li>
+				</ul>
+			</li>
+			<li  class="next">
+				<b>Отладить</b> мониторинг:
+				<ul>
+					<li>TIG — <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>, <a href="https://www.influxdata.com/products/influxdb-overview/">InfluxDB</a>, <a href="https://grafana.com/">Grafana</a></li>
+					<li>Prometheus — <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>, <a href="https://prometheus.io/">Prometheus</a>, <a href="https://grafana.com/">Grafana</a></li>
+				</ul>				
+			</li>
+			<li class="next">
+				<b>Проанализировать</b> логи:
+				<ul>
+					<li>ELK — Filebeat, Elastic Search, Kibana, Grafana</li>
+					<li>консоль — grep, awk</li>
+				</ul>					
+			</li>
+			<li class="next">
+				<b>Профилирование</b> приложения и БД:
+				<ul>
+					<li>JVM — SJK, JVisualVM, Java Fligth Recorder</li>
+					<li>Oracle, PostgreSQL — AWR, PASH / ASH Viewer</li>
+				</ul>					
+			</li>
+			<li class="next">
+				<b>Обсудить</b>:
+				<ul>
+					<li>с коллегами системными администраторами</li>
+				</ul>					
+			</li>							
+		</ol>
+		</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Задача:<br/>
+			провести тестирование производительности<br/>
+			в соотвествие с требованиями
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Проверка на соотвествие <b>требованиям</b></h2>
+		<figure>
+			<img class="w center" src="images/1/complex.png">
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<h2 class="next"><mark class="green">Точная нагрузка по <b>требованиям</b></mark></h2>
+		<ul>
+			<li class="next"><mark class="green">В подходящее время</mark></li>
+			<li class="next"><mark class="green">В нужном месте</mark></li>
+			<li class="next"><mark class="green">С нужной силой</mark></li>
+			<li class="next"><mark class="green">  анализом происходящего</mark></li>
+		</ul>
+		<ul class="next">
+			<li><mark class="yellow"><b>Apache.JMeter</b> — простые сценарии (Groovy, Java, JavaScript, ...)</mark></li>
+			<li><mark class="yellow"><b>Gatling</b> — сложные сценарии с десятками запросов (Scala)</mark></li>
+			<li><mark class="yellow"><b>wrk</b> — автоматизация на Lua</mark></li>
+			<li><mark class="yellow"><b>Yandex.Tank</b> — единый отчёт, масштабирование (Go, Python, ...)</mark></li>
+		</ul>
+		<ul class="next">
+			<li><mark class="red">Сценарии, максимальная гибкость</mark></li>
+			<li><mark class="red">Нужно умение разрабатывать многопоточные приложения</mark></li>
+		</ul>		
+		<figure>
+			<img class="w cover" src="images/1/perf.2.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://www.goodfon.ru/download/risunok-zhirnov-sovetskiy-2226/1280x960/">www.goodfon.ru</a>
+			</figcaption>			
+		</figure>
+	</div></section>
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/1/tools.png">			
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/1/tools.0.png">			
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/1/tools.2.png">			
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Инструмент подбирается под задачу</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Какую нагрузку подать?<br/>Обилие терминов в сети Интернет</h2>
+	</div></section>
+
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/1/termin.all.yandex.google.png">
+			<figcaption class="copyright right">
+				© <a href="https://infogram.com/populyarnost-vidov-testirovaniya-v-poiskovyh-sistemah-1gew2v85r45rmnj">owasp (infogram.com)</a>
+			</figcaption>		
+		</figure>
+	</div></section>
+
+
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Виды<br/>тестирования производительности</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Видов тестирования много</h2>
+		<img src="images/1/kind.png"
+			class="place bottom center"
+			style="height:80%; margin: 0 0px 50px 0"
+			alt="Виды тестирования производительности @polarnik (github.com)">
+	
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Выделим</h2>
+		<img src="images/1/kind.2.png"
+			class="place bottom center"
+			style="height:80%; margin: 0 0px 50px 0"
+			alt="Виды тестирования производительности @polarnik (github.com)">
+	
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Пять видов тестирования производительности</h2>
+		<figure>
+			<img class="w center" src="images/1/perf.kind.png" style="margin: 0 50px 0px 50px">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Производительность (<b>performance</b>)</h2>
+		<h3>количественная характеристика<br>скорости выполнения операций</h3>
+		<ul>
+			<li>количество операций</li>
+			<li>в единицу времени</li>
+		</ul>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Выдержит ли система планируемую нагрузку?<br/>
+			Есть ли узкие места?</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Нагрузочное тестирование (<b>load</b> testing)<br/>выполнение программы с повышением нагрузки<br/>от среднего профиля до максимального и выше</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Нагрузка подаётся ступенями</h2>
+		<h3>растёт количество операций в единицу времени</h3>
+		<img src="images/1/load.testing-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Или нагрузка растёт плавно</h2>
+		<h3>выше максимума, чтобы знать есть ли запас</h3>
+		<img src="images/1/load.testing-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Анализ длительности обработки запросов</h2>
+		<h3>ищём точку деградации и недоступности (timeout, 504, …)</h3>
+		<img src="images/1/load.testing-3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Сохраняем интенсивность (deg, off)</h2>
+		<h3>сравниваем с профилем нагрузки (min, med, max)</h3>
+		<img src="images/1/load.testing-3-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Анализ утилизации ресурсов: cpu, memory, …</h2>
+		<h3>ищём узкое место, лимиты, в т.ч. конфигурационные</h3>
+		<img src="images/1/load.testing-4.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Детальный анализ утилизации ресурсов</h2>
+		<h3>необходимо понимание работы системы: %usr, %sys, …</h3>
+		<img src="images/1/load.testing-4-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Анализ логов, ошибок, кодов ответов</h2>
+		<h3>ищем точку появления ошибок под нагрузкой</h3>
+		<img src="images/1/load.testing-5.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Сохраняем интенсивность (error)</h2>
+		<h3>стараемся избавиться от ошибок и предупреждений</h3>
+		<img src="images/1/load.testing-5-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Отчёт: точка деградации, ошибок, отказа, …</h2>
+		<h3>и их отношение к профилю нагрузки: med, max </h3>
+		<img src="images/1/load.testing-6.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Выбирем профиль для теста стабильности</h2>
+		<h3>обычно, 80% от точки деградации/появления ошибок</h3>
+		<img src="images/1/load.testing-6-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>		
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout"><b>Нагрузочное</b> тестирование (<b>Load</b> testing)<br>
+		☑ Выдержит ли система планируемую нагрузку?<br/>
+		☑ Есть ли узкие места?<br/>
+		Нашли точку деградации, ошибок, отказа<br/>
+		выбрали максимальную рабочую нагрузку - work<br/>
+		выявили узкие места и ошибки, устранили их</h2>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Что будет при эксплуатации 24x7?<br/>
+			Стабильна ли система под нагрузкой?<br/>
+			Как быстро растёт размер базы данных и логов?<br/>
+			Есть ли утечка соединений, памяти?<br/>
+			Нет ли потерь данных?</h2>
+	</div></section>		
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Тестирование стабильности (stability testing)<br/>
+			длительное тестирование со средней нагрузкой,
+			поиском отклонений и проверками корректности работы</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Выбирается рабочая нагрузка</h2>
+		<h3>не выше предельной, чтобы не было ошибок</h3>
+		<img src="images/1/stability.testing-0.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Тестирование проводится длительное время</h2>
+		<h3>всю ночь или все выходные</h3>
+		<img src="images/1/stability.testing-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Количественные и функциональные проверки</h2>
+		<h3>выполняются во время или между итерациями</h3>
+		<img src="images/1/stability.testing-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Стараться в тестировании стабильности</h2>
+		<h3>избежать неравномерной нагрузки: 1 сценарий/мин, но …</h3>
+		<img src="images/1/stability.testing-peak-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Пиков и спадов нагрузки по запросам</h2>
+		<h3>раз за разом</h3>
+		<img src="images/1/stability.testing-peak-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Пиков и спадов нагрузки по запросам</h2>
+		<h3>раз за разом, раз за разом</h3>
+		<img src="images/1/stability.testing-peak-3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Сложно выявлять аномалии</h2>
+		<h3>если утилизация ресурсов нестабильна</h3>
+		<img src="images/1/stability.testing-peak-4-metrics.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Прогрев (RampUp) сглаживает пики</h2>
+		<h3>но требует времени — идеальный равен шагу нагрузки</h3>
+		<img src="images/1/stability.testing-peak-rumpup.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Паузы уменьшают вероятность пиков</h2>
+		<h3>но их сложно расчитать — идеально делить по запросам</h3>
+		<img src="images/1/stability.testing-peak-timer.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Прогрев с паузами можно объединить</h2>
+		<h3>требует умения и пары экспериментов</h3>
+		<img src="images/1/stability.testing-peak-timer-rumpup.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>И тогда показатели будут стабильны</h2>
+		<h3>а выбросы будут указывать на проблемы</h3>
+		<img src="images/1/stability.testing-peak-timer-rumpup-metrics.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Утечки ресурсов и ошибки</h2>
+		<h3>попадут в отчёт по тестированию стабильности</h3>
+		<img src="images/1/stability.testing-results.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">☑ Что будет при эксплуатации 24x7?<br/>
+			☑ Стабильна ли система под нагрузкой?<br/>
+			☑ Как быстро растёт размер базы данных?<br/>
+			☑ Есть ли утечка соединений, памяти?<br/>
+			☑ Нет ли потерь данных?</h2>
+	</div></section>	
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Если нагрузка ненадолго превысит максимум?<br/>
+			Освобождаются ли неиспользуемые ресурсы?<br/>
+			Восстановится ли система после ошибок?<br/>
+			Какие ошибки проявляются под нагрузкой?</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Жил да был один сервер,<br/>
+			было у него три друга-сервера,<br/>
+			и однажды он решил перезагрузиться.</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Сначала всё было хорошо</h2>
+		<h3>нагрузка на каждый сервер была средней</h3>
+		<img src="images/1/system-reboot-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Один ушел на перезагрузку</h2>
+		<h3>нагрузка подросла</h3>
+		<img src="images/1/system-reboot-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Второй не выдержал</h2>
+		<h3>нагрузка ещё подросла</h3>
+		<img src="images/1/system-reboot-3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Третий не выдержал</h2>
+		<h3>и снова нагрузка подросла, пользователи заметили</h3>
+		<img src="images/1/system-reboot-4.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Работа начала восстанавливаться</h2>
+		<h3>а нагрузка выравниваться</h3>
+		<img src="images/1/system-reboot-5.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Работа почти восстановилась</h2>
+		<h3>нагрузка распределилась</h3>
+		<img src="images/1/system-reboot-6.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Система справилась</h2>
+		<h3>нагрузка снова минимальная</h3>
+		<img src="images/1/system-reboot-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Стрессовое тестирование (stress testing)<br/>
+			тестирование за пределами рабочих нагрузок,<br/>
+			в ограниченных ресурсах</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Быстро и ненадолго повысим нагрузку</h2>
+		<h3>и повторим такой процесс несколько раз</h3>
+		<img src="images/1/stress-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Выявим утечку ресурсов</h2>
+		<h3>проверим корректность обработки исключений</h3>
+		<img src="images/1/stress-3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Выявим утечку ресурсов</h2>
+		<h3>возможно, что ресурсы не освобождаются полностью</h3>
+		<img src="images/1/stress-5.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Выявим утечку ресурсов</h2>
+		<h3>возможно, что ресурсы не освобождаются частично</h3>
+		<img src="images/1/stress-5-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Проверим реакцию на временное зависание</h2>
+		<h3>быстро ли разбираются внутренние очереди системы</h3>
+		<img src="images/1/stress-6.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">		
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">☑ Если нагрузка ненадолго превысит максимум?<br/>
+			☑ Освобождаются ли неиспользуемые ресурсы?<br/>
+			☑ Восстановится ли система после ошибок?<br/>
+			☑ Какие ошибки проявляются под нагрузкой?</h2>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">А что будет через 5 лет работы?<br/>
+			Или через 10 лет работы при том же профиле?<br/>
+			Или если размер документов увеличить?<br/>
+			Нужно объёмное тестирование</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Объемное тестирование (volume testing)<br/>
+			тестирование при увеличении объемов данных</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наполняем базу, запускаем нагрузку</h2>
+		<h3>сценарий — через 1 год работы</h3>
+		<img src="images/1/volume-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наполняем базу, запускаем нагрузку</h2>
+		<h3>сценарий — через 5 лет работы</h3>
+		<img src="images/1/volume-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наполняем базу, запускаем нагрузку</h2>
+		<h3>сценарий — через 10 лет работы</h3>
+		<img src="images/1/volume-3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Увеличивается объём БД, а не интенсивность.<br/>
+			Нужно иметь и генератор нагрузки и данных.<br/>
+			Быстрые генераторы БД пишутся на SQL.<br/>
+			А готовят запросы на python, bash, java, …</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Обработка пакета запросов</h2>
+		<h3>профиль нагрузки — размер пакета данных</h3>
+		<img src="images/1/volume-4.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">☑ А что будет через 5 лет работы?<br/>
+			☑ Или через 10 лет работы при том же профиле?<br/>
+			☑ Или если размер документов увеличить?<br/>
+			☑ <strong>Объёмное</strong> тестирование проведено.</h2>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Поможет ли увеличение памяти в 2 раза?<br/>
+			Какой предел на другом железе?<br/>
+			Какая производительность при двух серверах?</h2>
+	</div></section>	
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Масштабируемости (scalability testing)<br/>
+			серия нагрузочных тестов<br/>
+			для разных профилей оборудования,<br/>
+			количества серверов или узлов системы,<br/>
+			настроек — размеров очередей, лимитов, …</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наращивание мощности оборудования</h2>
+		<h3>вертикальное масштабирование</h3>
+		<img src="images/1/scale-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Тестирование на разных конфигурациях</h2>
+		<h3>для прогноза затрат</h3>
+		<img src="images/1/scale-v-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наращивание мощности оборудования</h2>
+		<h3>имеет технический предел</h3>
+		<img src="images/1/scale-v-3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наращивание количества узлов</h2>
+		<h3>горизонтальное масштабирование</h3>
+		<img src="images/1/scale-1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наращивание количества узлов</h2>
+		<h3>закладывается в архитектуру</h3>
+		<img src="images/1/scale-h-2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Наращивание количества узлов</h2>
+		<h3>даёт гибкость</h3>
+		<img src="images/1/scale-h-3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">☑ Поможет ли увеличение памяти в 2 раза?<br/>
+			☑ Какой предел на другом железе?<br/>
+			☑ Какая производительность при двух серверах?</h2>
+	</div></section>
+
+
+	<!--
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Как автоматизировать масштабирование?<br/>
+			Что масштабировать?<br/>
+			Какие критерии, что мониторить?</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Автомасштабируемости (auto scalability)<br/>
+			проверка корректности профилей нагрузки,<br/>
+			проверка корректности правил,<br/>
+			работы системы масштабирования,<br/>
+			работы системы мониторинга</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Настройка критериев и механизма</h2>
+		<h3>интересная и непростая задача</h3>
+		<img src="images/1/scale-auto.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">☑ Как автоматизировать масштабирование?<br/>
+			☑ Что масштабировать?<br/>
+			☑ Какие критерии, что мониторить?</h2>
+	</div></section>
+	-->
+	
+	<section class="slide"><div>
+		<h2>Пять видов тестирования производительности</h2>
+		<figure>
+			<img class="w center" src="images/1/perf.kind.png" style="margin: 0 50px 0px 50px">
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/1/final.png"
+			style="max-height: 90%; max-width: 90%;">
+		</figure>
+	</div></section>
+
+	<section class="clear slide" id="contacts"><div>
+		<h2>Вячеслав Смирнов</h2>
+		<p>owasp@yandex.ru,<br/>@qa_load</p>
+		<div><span></span><h2>Спасибо!</h2></div>
+		<style>
+			#contacts h2 {
+				position: relative;
+				top: calc(var(--slide-height) / 3.06);
+				left: calc(var(--slide-width) / 12);
+				font-size: calc(var(--slide-height) / 15);
+			}
+			#contacts p {
+				position: relative;
+				top: calc(var(--slide-height) / 2.7);
+				left: calc(var(--slide-width) / 12);
+			}
+			#contacts div div {
+				width: calc(var(--slide-width) / 4);
+				height: calc(var(--slide-width) / 4);
+				position: absolute;
+				top: calc(var(--slide-height) / 4);
+				left: calc(var(--slide-width) * (8/9 - 1/4));
+				background: #ffed00;
+				border-radius: 50%;
+				white-space: nowrap;
+				text-align: center;
+				vertical-align: middle;
+			}
+			#contacts div div span {
+				display: inline-block;
+				height: 90%;
+				vertical-align: middle;
+			}
+			#contacts div div h2 {
+				z-index: auto;
+				vertical-align: middle;
+				position: static;
+				display: inline-block;
+				margin-bottom: 0;
+				color: #000;
+			}
+		</style>
+	</div></section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
