@@ -28,17 +28,24 @@
 		<h2>Тестирование<br/>производительности</h2>
 		<p>Вячеслав Смирнов</p>
 		<p>owasp@yandex.ru</p>
+		<img class="start" src="images/2/final.png">
 		<style>
+			img.start {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
 			#title h2 {
 				position: relative;
 				top: calc(var(--slide-height) / 10);
-				left: calc(var(--slide-width) / 4);
+				left: calc(var(--slide-width) / 3);
 				font-size: calc(var(--slide-height) / 12);
 			}
 			#title p {
 				position: relative;
 				top: 150px;
-				left: calc(var(--slide-width) / 4);
+				left: calc(var(--slide-width) / 3);
 				font-size: calc(var(--slide-height) / 20);
 				line-height: calc(var(--slide-height) / 15);
 			}
@@ -78,28 +85,7 @@
 	</div></section>
 
 
-	<section class="clear slide"><div>
-		<h2>Тестирование производительности сегодня</h2>
-		<ul class="next">
-			Аналитики
-			<li><mark class="red">Удобство использования</mark></li>
-			<li><mark class="red">Понятность бизнес-процесса, запоминаемость</mark></li>
-		</ul>
-		<ul class="next">
-			Проектировщики интерфейсов, Frontend/Android/iOS-разработчики
-			<li><mark class="yellow">Клиенсткая оптимизация, быстрая отрисовка</mark></li>
-			<li><mark class="yellow">Энергоэффективность</mark></li>
-		</ul>		
-		<ul class="next">
-			Администраторы, backend-разработчики
-			<li><mark class="green">Быстрые ответы сервера</mark></li>
-			<li><mark class="green">Эффективное использование оборудования</mark></li>
-		</ul>
-	</div></section>
 
-	<section class="clear green slide"><div>
-		<h2 class="small shout">Инженер по производительности —<br/>на все руки мастер</h2>
-	</div></section>
 
 	<section class="clear yellow slide"><div>
 		<h2 class="small shout">Что такое<br/>тестирование производительности?</h2>
@@ -125,6 +111,29 @@
 			<li>и как организована работа</li>
 			<li>и кем она выполняется</li>
 			<ul></h2>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<h2>Тестирование производительности сегодня</h2>
+		<ul class="next">
+			Администраторы, backend-разработчики
+			<li><mark class="green">Быстрые ответы сервера</mark></li>
+			<li><mark class="green">Эффективное использование оборудования</mark></li>
+		</ul>
+		<ul class="next">
+			Проектировщики интерфейсов, Frontend/Android/iOS-разработчики
+			<li><mark class="yellow">Клиенсткая оптимизация, быстрая отрисовка</mark></li>
+			<li><mark class="yellow">Энергоэффективность</mark></li>
+		</ul>		
+		<ul class="next">
+			Аналитики
+			<li><mark class="red">Удобство использования</mark></li>
+			<li><mark class="red">Понятность бизнес-процесса, запоминаемость</mark></li>
+		</ul>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Инженер по производительности —<br/>на все руки мастер</h2>
 	</div></section>
 
 	<section class="clear yellow slide"><div>
@@ -539,13 +548,25 @@
 
 	<section class="clear slide"><div>
 		<figure>
-			<img class="w cover" src="images/1/tools.0.png">			
+			<img class="h cover" src="images/1/tools.0.png">			
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/1/tools.1.png">			
 		</figure>
 	</div></section>
 
 	<section class="clear slide"><div>
 		<figure>
 			<img class="h cover" src="images/1/tools.2.png">			
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/1/tools.3.png">			
 		</figure>
 	</div></section>
 
@@ -745,70 +766,6 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Стараться в тестировании стабильности</h2>
-		<h3>избежать неравномерной нагрузки: 1 сценарий/мин, но …</h3>
-		<img src="images/1/stability.testing-peak-1.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Пиков и спадов нагрузки по запросам</h2>
-		<h3>раз за разом</h3>
-		<img src="images/1/stability.testing-peak-2.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Пиков и спадов нагрузки по запросам</h2>
-		<h3>раз за разом, раз за разом</h3>
-		<img src="images/1/stability.testing-peak-3.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Сложно выявлять аномалии</h2>
-		<h3>если утилизация ресурсов нестабильна</h3>
-		<img src="images/1/stability.testing-peak-4-metrics.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Прогрев (RampUp) сглаживает пики</h2>
-		<h3>но требует времени — идеальный равен шагу нагрузки</h3>
-		<img src="images/1/stability.testing-peak-rumpup.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Паузы уменьшают вероятность пиков</h2>
-		<h3>но их сложно расчитать — идеально делить по запросам</h3>
-		<img src="images/1/stability.testing-peak-timer.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Прогрев с паузами можно объединить</h2>
-		<h3>требует умения и пары экспериментов</h3>
-		<img src="images/1/stability.testing-peak-timer-rumpup.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>И тогда показатели будут стабильны</h2>
-		<h3>а выбросы будут указывать на проблемы</h3>
-		<img src="images/1/stability.testing-peak-timer-rumpup-metrics.png"
-			class="place bottom center"
-			style="height:60%; margin: 50px 0px 50px 0">
-	</div></section>
-
-	<section class="slide"><div>
 		<h2>Утечки ресурсов и ошибки</h2>
 		<h3>попадут в отчёт по тестированию стабильности</h3>
 		<img src="images/1/stability.testing-results.png"
@@ -870,7 +827,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Работа начала восстанавливаться</h2>
+		<h2>Система начала восстанавливаться</h2>
 		<h3>а нагрузка выравниваться</h3>
 		<img src="images/1/system-reboot-5.png"
 			class="place bottom center"
@@ -878,7 +835,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Работа почти восстановилась</h2>
+		<h2>Система почти восстановилась</h2>
 		<h3>нагрузка распределилась</h3>
 		<img src="images/1/system-reboot-6.png"
 			class="place bottom center"
@@ -1117,6 +1074,280 @@
 		</figure>
 	</div></section>
 
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/3/Генерация тестовых данных.png"
+			style="max-height: 90%; max-width: 90%;">
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Основа генератора пишется на SQL<br/>
+			А Java/Scala/Python/Lua/Go/... лишь помогают</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>SQL для генерации данных</h2>
+		<h3>Почему SQL, а не API: Java/Scala/Python/C#/...</h3>
+		<ul>
+			<li><mark>SQL — скорость</mark>
+				<ul>
+					<li>можно сгенерировать 100 Гбайт</li>
+					<li>не нужны интеграции</li>
+					<li>SQL может многое</li>
+				</ul>
+			</li>
+			<li>API — гибкость и надёжность
+				<ul>
+					<li>генерация на активной системе</li>
+					<li>быстрый отклик по корректности</li>
+					<li>Java/Scala/Python/С#/... могут всё</li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Опыт использования SQL-генераторов</h2>
+		<img src="images/3/Генерация тестовых данных.1.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Планирование данных</h2>
+		<h3>Продумать шаблоны и количество</h3>
+		<table>
+			<tr>
+				<th>Сценарий</th>
+				<th>Шаблоны</th>
+				<th>Количество</th>
+			</tr>
+			<tr>
+				<td>Login_logout</td>
+				<td>loadUser{N}@ok.org</td>
+				<td>Users – 100к, History – x3</td>
+			</tr>
+			<tr>
+				<td>Try_fail_pass</td>
+				<td>incorrect{N}pass@bad.org</td>
+				<td>Users – 50к, History – x1</td>
+			</tr>
+			<tr>
+				<td>Reset_password</td>
+				<td>user{N}Reset@password.com</td>
+				<td>Users – 10к, History – x5</td>
+			</tr>			
+		</table>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Шаблоны</h2>
+		<h3>Параметризация</h3>
+
+		<ul>
+			<li><mark>load_fill_database_{scenario}</mark></li>
+			<li class="next">load_fill_database</li>
+			<li class="next">load_get_name, ...</li>
+		</ul>
+		<img src="images/3/fill_database_scenario.png"
+			class="place right center"
+			style="height:100%; margin: 00px 0px 00px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Шаблоны</h2>
+		<h3>Параметризация</h3>
+
+		<ul>
+			<li>load_fill_database_{scenario}</li>
+			<li><mark>load_fill_database</mark></li>
+			<li>load_get_name, ...</li>
+		</ul>
+		<img src="images/3/fill_database.png"
+			class="place right center"
+			style="height:100%; margin: 00px 0px 00px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Шаблоны</h2>
+		<h3>Параметризация</h3>
+
+		<ul>
+			<li>load_fill_database_{scenario}</li>
+			<li>load_fill_database</li>
+			<li><mark>load_get_name</mark>, ...</li>
+		</ul>
+		<img src="images/3/get_name.png"
+			class="place right center"
+			style="height:100%; margin: 00px 0px 00px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подходы для генерации значений</h2>
+		<h3>Объект – функция от параметров и номера</h3>
+
+		<pre>
+			<code>FOR <mark>index</mark> IN "indexStart".."indexEnd" LOOP</code>
+			<code>    <mark class="green">value</mark> = function(<mark>index</mark>, params)</code>
+			<code>        Использование <mark class="green">value</mark> для вставки в таблицы</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подходы для генерации значений</h2>
+		<h3>[0; N-1] = Остаток от деления на N</h3>
+
+		<pre>
+			<code><mark class="green">value</mark> = <mark>index</mark> % 80000</code>
+			<code></code>
+		</pre>
+		Получится:
+		<pre>
+			<code>77777</code>
+			<code>123</code>
+			<code><mark class="red"><strike>999999999</strike></mark></code>
+		</pre>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подходы для генерации значений</h2>
+		<h3>Функция format для шаблонных строк</h3>
+
+		<pre>
+			<code>nick_name = format('<mark>user</mark> <mark class="green">%s</mark> <mark>name</mark>',</code>
+			<code>            index::text)</code>
+		</pre>
+		Получится:
+		<pre>
+			<code><mark>user</mark> <mark class="green">77777</mark> <mark>name</mark></code>
+			<code><mark>user</mark> <mark class="green">123</mark> <mark>name</mark></code>
+		</pre>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подходы для генерации значений</h2>
+		<h3>Комбинации format и остатка от деления для IPv4</h3>
+
+		<pre>
+			<code>format('106.%s.%s.%s',</code>
+			<code>       (((<mark>ip_index</mark> / 250) / 250) % 250)::text,</code>
+			<code>       (( <mark>ip_index</mark> / 250) % 250)::text,</code>
+			<code>       (  <mark>ip_index</mark> % 250 + 1)::text  )</code>
+		</pre>
+		Получится 15 625 000 значений:
+		<pre>
+			<code>106.0.1.2</code>
+		</pre>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подходы для генерации значений</h2>
+		<h3>GUID = md5 от имени таблицы, теста и номера</h3>
+
+		<pre>
+			<code>guid = md5( 'users '  ||</code>
+			<code>       <mark>test_name</mark> ||</code>
+			<code>       lpad(<mark>index</mark>::text, 12, '0'))::uuid;</code>
+		</pre>
+		Получится GUID для теста <mark>test_name</mark>:
+		<pre>
+			<code>faf154aa-54d1-0b07-3c8e-fe8921f96c45</code>
+		</pre>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подходы для генерации значений</h2>
+		<h3>GUID = md5 от имени таблицы, теста и номера</h3>
+		<h3>Номер = 0 .. 999 999 999 999</h3>
+
+		<pre>
+			<code>guid = ('22-33-44-55' || 'aa-bb-cc-dd-ee-ff' || </code>
+			<code>       lpad(<mark>index</mark>::text, 12, '0'))::uuid;</code>
+		</pre>
+		Получится GUID:
+		<pre>
+			<code>22334455-aabb-ccdd-eeff-000000000001</code>
+		</pre>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подходы для генерации значений</h2>
+		<h3>Выбор из словаря</h3>
+
+		<pre>
+			<code>array[ 1 + </code>
+			<code>       mod(abs( <mark>index</mark> ), </code>
+			<code>       arrayLenght) ]</code>
+		</pre>
+		предел 1 ГБайт
+		<img src="images/3/get_name.png"
+			class="place right center"
+			style="height:100%; margin: 00px 0px 00px 0">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Генерация тестовых данных: pandas, elizabeth</h2>
+		<img src="images/3/Генерация тестовых данных.3.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div style="text-align: right;">
+		<h2><mark>Просто создать</mark></h2>
+		<h3><mark>Person (жен)</mark></h3>
+		<h2><mark>Не очень сложно сгенерировать</mark></h2>
+		<h3><mark>отчество</mark></h3>
+
+		<img src="images/3/Generate_women.png"
+			class="bg"
+			style="height:100%; width: 100%; margin: 00px 0px 00px 0; z-index: -100;">
+	</div></section>
+
+	<section class="slide"><div style="text-align: right;">
+		<h2><mark>Дополнительно нужна</mark></h2>
+		<h3><mark>транслитерация</mark></h3>
+
+		<img src="images/3/Generate_men.png"
+			class="bg"
+			style="height:100%; width: 100%; margin: 00px 0px 00px 0; z-index: -100;">
+	</div></section>
+
+	<section class="slide"><div style="text-align: right;">
+		<h2><mark>Удаление дублей</mark></h2>
+		<h3><mark>Pandas</mark></h3>
+		<h2><mark>Генерация серий</mark></h2>
+		<h3><mark>Python</mark></h3>
+
+		<img src="images/3/Generate_women.png"
+			class="bg"
+			style="height:100%; width: 100%; margin: 00px 0px 00px 0; z-index: -100;">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Java, Scala когда важно не ошибиться</h2>
+		<img src="images/3/Генерация тестовых данных.2.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Ставка на качественные данные</h2>
+		<img src="images/3/Генерация тестовых данных.4.png"
+			class="place bottom center"
+			style="height:60%; margin: 50px 0px 50px 0">
+	</div></section>
+
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Основа генератора пишется на SQL<br/>
+			А Java/Scala/Python/Lua/Go/... лишь помогают<br>
+			Для спец. форматов используются библиотеки<br>
+			Для простоты используем сериализацию<br>
+			Затраты на генерацию окупаются стабильностью
+		</h2>
+	</div></section>
+
 	<section class="clear slide" id="contacts"><div>
 		<h2>Вячеслав Смирнов</h2>
 		<p>owasp@yandex.ru,<br/>@qa_load</p>
@@ -1158,6 +1389,20 @@
 				margin-bottom: 0;
 				color: #000;
 			}
+			img.bg {
+			  /* Set rules to fill background */
+			  min-height: 100%;
+			  min-width: 1024px;
+				
+			  /* Set up proportionate scaling */
+			  width: 100%;
+			  height: auto;
+				
+			  /* Set up positioning */
+			  position: fixed;
+			  top: 0;
+			  left: 0;
+			}			
 		</style>
 	</div></section>
 
